@@ -9,6 +9,27 @@ function App() {
   const [showModal, setShowModal] = useState(false)
   const [showHistory, setShowHistory] = useState(false)
 
+  const [vehicleList, setVehicleList] = useState([
+    {
+        vehicleType:'car',
+        vehicleNo:'WB 18 AE 1077',
+        DriverName:'John Doe',
+        CheckinTime:'10:00'
+    },
+    {
+        vehicleType:'truck',
+        vehicleNo:'WB 18 AE 9087',
+        DriverName:'John Bruh',
+        CheckinTime:'10:30'
+    },
+    {
+        vehicleType:'bike',
+        vehicleNo:'WB 18 AE 9070',
+        DriverName:'John Buh',
+        CheckinTime:'10:50'
+    },
+])
+
 
   return (
     <div className="App">
@@ -21,7 +42,7 @@ function App() {
           <ParkModalComponent setShowModal={setShowModal} />
         }
         <HeaderComponent setShowHistory={setShowHistory}/>
-        <DashboardPanelComponent setShowModal={setShowModal} />
+        <DashboardPanelComponent vehicleList={vehicleList} setShowModal={setShowModal} />
     </div>
   );
 }

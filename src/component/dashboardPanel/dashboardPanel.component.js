@@ -1,41 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './dashboardPanel.module.css'
 
 import Park from '../../assets/icons/parkSymbol.svg'
 
 import VehicleTokenComponent from '../vehicleToken/vehicleToken.component'
 
-function DashboardPanelComponent({setShowModal}) {
-
-    const vehicleList = [
-        {
-            vehicleType:'car',
-            vehicleNo:'WB 18 AE 1077',
-            DriverName:'John Doe',
-            CheckinTime:'10:00pm'
-        },
-        {
-            vehicleType:'truck',
-            vehicleNo:'WB 18 AE 9087',
-            DriverName:'John Bruh',
-            CheckinTime:'10:30pm'
-        },
-        {
-            vehicleType:'bike',
-            vehicleNo:'WB 18 AE 9070',
-            DriverName:'John Buh',
-            CheckinTime:'10:50pm'
-        },
-    ]
-
+function DashboardPanelComponent({vehicleList,setShowModal}) {
 
     return (
         <div className={classes.majorContainer}>
 
             {
                 vehicleList&&
-                vehicleList.map((vehicle)=>
-                    <VehicleTokenComponent 
+                vehicleList.map((vehicle,index)=>
+                    <VehicleTokenComponent
+                        key={index} 
                         vehicleType={vehicle.vehicleType}
                         vehicleNo={vehicle.vehicleNo}
                         DriverName={vehicle.DriverName}

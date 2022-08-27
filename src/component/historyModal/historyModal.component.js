@@ -15,30 +15,32 @@ function HistoryModalComponent({setShowHistory}) {
                 </div>
                 <div className={classes.forScroll}>
                     <table className={classes.info}>
-                        <tr>
-                            <th>Vehicle Type</th>
-                            <th>Vehicle No</th>
-                            <th>Driver Name</th>
-                            <th>Check In Time</th>
-                            <th>Check Out Time</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                Car
-                            </td>
-                            <td>
-                                WB 18AE 1077
-                            </td>
-                            <td>
-                                John Doe
-                            </td>
-                            <td>
-                                10:00am
-                            </td>
-                            <td>
-                                12:00pm
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th>Vehicle Type</th>
+                                <th>Vehicle No</th>
+                                <th>Driver Name</th>
+                                <th>Check In Time</th>
+                                <th>Check Out Time</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Car
+                                </td>
+                                <td>
+                                    WB 18AE 1077
+                                </td>
+                                <td>
+                                    John Doe
+                                </td>
+                                <td>
+                                    10:00
+                                </td>
+                                <td>
+                                    13:00
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
