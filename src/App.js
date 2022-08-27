@@ -9,29 +9,11 @@ function App() {
   const [showModal, setShowModal] = useState(false)
   const [showHistory, setShowHistory] = useState(false)
   const [totalVehicles, setTotalVehicles] = useState(0)
+  const [showType, setShowType] = useState('all')
 
   const [report, setReport] = useState([])
 
-  const [vehicleList, setVehicleList] = useState([
-    {
-        vehicleType:'car',
-        vehicleNo:'WB 18 AE 1077',
-        driverName:'John Doe',
-        checkInTime:'10:00:00'
-    },
-    {
-        vehicleType:'truck',
-        vehicleNo:'WB 18 AE 9087',
-        driverName:'John Bruh',
-        checkInTime:'10:30:00'
-    },
-    {
-        vehicleType:'bike',
-        vehicleNo:'WB 18 AE 9070',
-        driverName:'John Buh',
-        checkInTime:'10:50:00'
-    },
-  ])
+  const [vehicleList, setVehicleList] = useState([])
 
   useEffect(() => {
     setTotalVehicles(vehicleList.length)
@@ -66,7 +48,7 @@ function App() {
       }
     })
 
-    console.log([...report, {...checkedOutVehicle,checkOutTime}])
+    // console.log([...report, {...checkedOutVehicle,checkOutTime}])
     setReport([...report, {...checkedOutVehicle,checkOutTime}])
     setVehicleList(tempList)
     alert(`Vehicle Checked Out:-\nvehicle number: ${vehicleNumber}\nchecked In: ${checkedOutVehicle.checkInTime}\nchecked Out: ${checkOutTime}\n(data saved in report)`)
@@ -88,11 +70,14 @@ function App() {
           <ParkModalComponent checkInVehicle={checkInVehicle} setShowModal={setShowModal} />
         }
         <HeaderComponent 
+          showType={showType}
+          setShowType={setShowType}
           totalVehicles={totalVehicles} 
           setShowHistory={setShowHistory}
         />
         <DashboardPanelComponent 
             checkOutVehicle={checkOutVehicle} 
+            showType={showType}
             vehicleList={vehicleList} 
             setShowModal={setShowModal} 
         />

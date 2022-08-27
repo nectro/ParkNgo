@@ -43,3 +43,6 @@
 .vehicleType h2:hover{
     opacity: 1;
 }
+.selected{
+    opacity: 1 !important;
+}
