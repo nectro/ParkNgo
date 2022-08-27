@@ -1,0 +1,16 @@
+.majorContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap:15px;
+    padding: 10px;
+}
+.VehicleCard{
+    width:260px;
+    height:120px;
+    background-color: #ffcc02;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.301);
+}
