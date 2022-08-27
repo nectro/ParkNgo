@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from './parkModal.module.css'
 
 import car from '../../assets/icons/car.svg'
 import truck from '../../assets/icons/truck.svg'
 import bike from '../../assets/icons/bike.svg'
 
-function ParkModalComponent({setShowModal}) {
+function ParkModalComponent({checkInVehicle,setShowModal}) {
 
     const [driverName, setDriverName] = useState("");
     const [vehicleNumber, setVehicleNumber] = useState("");
     const [type, setType] = useState('car');
-    const [checkIn, setCheckIn] = useState(null);
 
-    console.log(Date())
+    // useEffect(() => {
+    //     const date = new Date()
+    //     console.log(date.getHours()+':'+date.getMinutes())
+    // }, [])
 
     return (
         <div className={classes.majorContainer}>
@@ -40,7 +42,7 @@ function ParkModalComponent({setShowModal}) {
                     </div>
                 </div>
                 <div className={classes.btnCtn}>
-                    <button>Park</button>
+                    <button onClick={()=>{checkInVehicle(vehicleNumber,driverName,type)}}>Park</button>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import Park from '../../assets/icons/parkSymbol.svg'
 
 import VehicleTokenComponent from '../vehicleToken/vehicleToken.component'
 
-function DashboardPanelComponent({vehicleList,setShowModal}) {
+function DashboardPanelComponent({checkOutVehicle,vehicleList,setShowModal}) {
 
     return (
         <div className={classes.majorContainer}>
@@ -15,10 +15,11 @@ function DashboardPanelComponent({vehicleList,setShowModal}) {
                 vehicleList.map((vehicle,index)=>
                     <VehicleTokenComponent
                         key={index} 
+                        checkOutVehicle={checkOutVehicle}
                         vehicleType={vehicle.vehicleType}
                         vehicleNo={vehicle.vehicleNo}
-                        DriverName={vehicle.DriverName}
-                        CheckinTime={vehicle.CheckinTime}
+                        driverName={vehicle.driverName}
+                        checkInTime={vehicle.checkInTime}
                     />
                 )
             }
