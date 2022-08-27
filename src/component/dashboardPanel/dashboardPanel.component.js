@@ -13,7 +13,19 @@ function DashboardPanelComponent({setShowModal}) {
             vehicleNo:'WB 18 AE 1077',
             DriverName:'John Doe',
             CheckinTime:'10:00pm'
-        }
+        },
+        {
+            vehicleType:'truck',
+            vehicleNo:'WB 18 AE 9087',
+            DriverName:'John Bruh',
+            CheckinTime:'10:30pm'
+        },
+        {
+            vehicleType:'bike',
+            vehicleNo:'WB 18 AE 9070',
+            DriverName:'John Buh',
+            CheckinTime:'10:50pm'
+        },
     ]
 
 
