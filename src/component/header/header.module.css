@@ -1,5 +1,6 @@
 .majorContainer{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -45,4 +46,68 @@
 }
 .selected{
     opacity: 1 !important;
+}
+.vehicleTypeM{
+    display: none;
+}
+
+@media screen and (max-width:774px) {
+    .vehicleTypeM{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap:20px;
+        font-weight: 500;
+    }
+    .vehicleType{
+        display: none;
+    }
+    .logo{
+        height: 40px;
+    }
+    .menu{
+        position: fixed;
+        background-color: rgba(172, 172, 172, 0.315);
+        top:0px;
+        left: 0px;
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+        backdrop-filter: blur(4px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'quicksand';
+        font-weight: 900;
+        gap:30px
+    }
+
+    .menu img{
+        opacity: 0.6;
+    }
+
+    .menu h2{
+        opacity: 0.6;
+    }
+    .closeIcon{
+        position: absolute;
+        top:6px;
+        right:6px;
+        font-weight: 800;
+        font-family: 'quicksand';
+        background-color: #ffcc02;
+        padding: 2px 7px;
+        border-radius: 30%;
+        cursor: pointer;
+    }
+    .closeIcon:active{
+        opacity: 0.4;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .logo{
+        height: 36px;
+    }
 }
