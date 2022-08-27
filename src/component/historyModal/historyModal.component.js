@@ -5,7 +5,7 @@ import car from '../../assets/icons/car.svg'
 import truck from '../../assets/icons/truck.svg'
 import bike from '../../assets/icons/bike.svg'
 
-function HistoryModalComponent({setShowHistory}) {
+function HistoryModalComponent({report,setShowHistory}) {
     return (
         <div className={classes.majorContainer}>
             <div className={classes.formCtn}>
@@ -23,23 +23,28 @@ function HistoryModalComponent({setShowHistory}) {
                                 <th>Check In Time</th>
                                 <th>Check Out Time</th>
                             </tr>
-                            <tr>
-                                <td>
-                                    Car
-                                </td>
-                                <td>
-                                    WB 18AE 1077
-                                </td>
-                                <td>
-                                    John Doe
-                                </td>
-                                <td>
-                                    10:00
-                                </td>
-                                <td>
-                                    13:00
-                                </td>
-                            </tr>
+                            {
+                                report &&
+                                report.map( (r,index)=>
+                                    <tr key={index}>
+                                        <td>
+                                            {r.vehicleType}
+                                        </td>
+                                        <td>
+                                            {r.vehicleNo}
+                                        </td>
+                                        <td>
+                                            {r.driverName}
+                                        </td>
+                                        <td>
+                                            {r.checkInTime}
+                                        </td>
+                                        <td>
+                                            {r.checkOutTime}
+                                        </td>
+                                    </tr>
+                                 )
+                            }
                         </tbody>
                     </table>
                 </div>

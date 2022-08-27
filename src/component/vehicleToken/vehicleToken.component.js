@@ -10,7 +10,7 @@ const VehicleTokenComponent = ({checkOutVehicle,vehicleType,vehicleNo,driverName
         <div className={classes.VehicleCard}>
             <div className={classes.type}>
                 <img src={vehicleType==='car'?car:vehicleType==='truck'?truck:bike} />
-                <button onClick={()=>checkOutVehicle(vehicleNo,checkInTime)}>Check Out</button>
+                <button onClick={()=>checkOutVehicle(vehicleNo)}>Check Out</button>
             </div>
             <div className={classes.details}>
                 <p><b>Vehicle No</b><br/> {vehicleNo}</p>
