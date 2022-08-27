@@ -6,9 +6,31 @@ import Park from '../../assets/icons/parkSymbol.svg'
 import VehicleTokenComponent from '../vehicleToken/vehicleToken.component'
 
 function DashboardPanelComponent({setShowModal}) {
+
+    const vehicleList = [
+        {
+            vehicleType:'car',
+            vehicleNo:'WB 18 AE 1077',
+            DriverName:'John Doe',
+            CheckinTime:'10:00pm'
+        }
+    ]
+
+
     return (
         <div className={classes.majorContainer}>
-            <VehicleTokenComponent />
+
+            {
+                vehicleList&&
+                vehicleList.map((vehicle)=>
+                    <VehicleTokenComponent 
+                        vehicleType={vehicle.vehicleType}
+                        vehicleNo={vehicle.vehicleNo}
+                        DriverName={vehicle.DriverName}
+                        CheckinTime={vehicle.CheckinTime}
+                    />
+                )
+            }
             <div className={classes.ParkCard} onClick={()=>setShowModal(true)}>
                 <img src={Park} />
                 <h2>Park Vehicle</h2>

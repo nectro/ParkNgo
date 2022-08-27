@@ -5,16 +5,17 @@ import car from '../../assets/icons/carD.svg'
 import truck from '../../assets/icons/truckD.svg'
 import bike from '../../assets/icons/bikeD.svg'
 
-const VehicleTokenComponent = () => {
+const VehicleTokenComponent = ({vehicleType,vehicleNo,DriverName,CheckinTime}) => {
     return (
         <div className={classes.VehicleCard}>
             <div className={classes.type}>
-                <img src={car} />
+                <img src={vehicleType==='car'?car:vehicleType==='truck'?truck:bike} />
+                <button>Check Out</button>
             </div>
             <div className={classes.details}>
-                <p><b>Vehicle No</b><br/> WB 18AE 1077</p>
-                <p><b>Driver Name</b><br/> John Doe</p>
-                <p><b>CheckIn Time</b><br/> 10:20pm</p>
+                <p><b>Vehicle No</b><br/> {vehicleNo}</p>
+                <p><b>Driver Name</b><br/> {DriverName}</p>
+                <p><b>CheckIn Time</b><br/> {CheckinTime}</p>
             </div>
         </div>
     )
