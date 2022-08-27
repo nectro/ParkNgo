@@ -1,0 +1,35 @@
+.majorContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.151);
+}
+
+.majorContainer h1{
+    font-family: 'quicksand';
+    font-weight: 1000;
+    color:rgb(255, 147, 6)
+}
+
+.logo{
+    height:55px;
+}
+
+.vehicleType{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:20px;
+    font-weight: 500;
+}
+.vehicleType img{
+    cursor:pointer;
+    opacity: 0.6;
+    transition-duration: 0.4s;
+}
+.vehicleType img:hover{
+    opacity: 1;
+
+}
