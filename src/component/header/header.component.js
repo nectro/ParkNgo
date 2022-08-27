@@ -18,6 +18,7 @@ function HeaderComponent({setShowHistory}) {
                 <p>
                    Show vehicle type:
                 </p>
+                <h2>All</h2>
                 <img src={car} />
                 <img src={truck} />
                 <img src={bike} />
