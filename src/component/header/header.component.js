@@ -40,7 +40,7 @@ function HeaderComponent({showType,setShowType,totalVehicles,setShowHistory}) {
                     <p>
                         Show vehicle type:
                     </p>
-                    <h2 className={showType === 'all'?classes.selected:''} onClick={()=>{setShowType('all')}}>All</h2>
+                    <h2 className={showType === 'all'?classes.selected:''} onClick={()=>{setShowType('all');setModal(false);}}>All</h2>
                     <img src={car} className={showType === 'car'?classes.selected:''}  onClick={()=>{setShowType('car');setModal(false);}}/>
                     <img src={truck} className={showType === 'truck'?classes.selected:''}  onClick={()=>{setShowType('truck');setModal(false);}}/>
                     <img src={bike} className={showType === 'bike'?classes.selected:''}  onClick={()=>{setShowType('bike');setModal(false);}}/>

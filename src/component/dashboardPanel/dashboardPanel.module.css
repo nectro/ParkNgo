@@ -35,3 +35,9 @@
     transform: scale(1.03);
     opacity: 1;
 }
+
+@media screen and (max-width:450px) {
+    .ParkCard{
+        width: 100%;
+    }
+}

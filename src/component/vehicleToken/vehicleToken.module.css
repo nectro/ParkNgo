@@ -59,3 +59,10 @@
 .type button:active{
     opacity: 0.7;
 }
+
+
+@media screen and (max-width:450px) {
+    .VehicleCard{
+        width: 100%;
+    }
+}

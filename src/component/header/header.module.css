@@ -67,7 +67,7 @@
     }
     .menu{
         position: fixed;
-        background-color: rgba(172, 172, 172, 0.315);
+        background-color: rgba(255, 255, 255, 0.815);
         top:0px;
         left: 0px;
         height: 100vh;
@@ -84,11 +84,11 @@
     }
 
     .menu img{
-        opacity: 0.6;
+        opacity: 1;
     }
 
     .menu h2{
-        opacity: 0.6;
+        opacity: 1;
     }
     .closeIcon{
         position: absolute;
