@@ -85,6 +85,7 @@
 }
 .typeCtn img{
     height: 26px;
+    opacity: 0.6;
 }
 
 .btnCtn button{

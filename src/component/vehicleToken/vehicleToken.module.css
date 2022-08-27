@@ -1,0 +1,44 @@
+.VehicleCard{
+    display: grid;
+    gap:10px;
+    grid-template-columns: 1.5fr 2fr;
+    width:290px;
+    height:150px;
+    background-color: #ffcc02;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.301);
+    transition-duration: 0.12s;
+    opacity: 0.98;
+}
+.VehicleCard h2{
+    font-family: 'quicksand';
+    font-size: 24px;
+    opacity: 0.8;
+}
+.VehicleCard img{
+    width: 30%;
+    opacity: 0.7;
+}
+.VehicleCard:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    opacity: 1;
+}
+.type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.type img{
+    width: 50%;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.details p{
+    font-size: 12px;
+    text-align: left;
+}
